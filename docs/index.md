@@ -11,5 +11,7 @@ In Astronomy, *nighshift* is useful to answer the following questions:
 :maxdepth: 0
    
 installation.md
+acknowledgement
 ipynb/getstarted
+api.rst
 ```

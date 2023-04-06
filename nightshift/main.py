@@ -25,4 +25,23 @@ def _coverage(times, period):
         return np.sum(spaces_in - spaces_out) / period
 
 
-coverage = np.vectorize(_coverage, signature="(n),()->()")
+vectorize_coverage = np.vectorize(_coverage, signature="(n),()->()")
+
+
+def coverage(times: list, periods: np.array):
+    """Returns the phase coverage for given period(s)
+
+    Parameters
+    ----------
+    times : list
+        a list of observed times
+    periods : np.array
+        an array of periods
+
+    Returns
+    -------
+    np.array
+        coverage of each period
+    """
+
+    return vectorize_coverage(times, periods)
