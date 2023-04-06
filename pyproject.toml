@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nighshift"
+version = "0.0.1"
+authors = [{ name = "Lionel Garcia" }]
+description = "Compute and visualize observations phase coverage"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["observations", "astronomy", "exoplanets"]
+license = { text = "MIT" }
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+docs = [
+  "sphinx",
+  "docutils",
+  "jupyterlab",
+  "myst-parser",
+  "twine",
+  "sphinx-book-theme",
+  "black",
+  "myst_nb",
+  "sphinx-copybutton",
+]

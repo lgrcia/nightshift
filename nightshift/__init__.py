@@ -1,5 +1,5 @@
 # type: ignore[attr-defined]
-""" a Python package to vcompute and visualize phase coverage"""
+"""A Python package to compute and visualize an observation phase coverage"""
 
 import sys
 
@@ -17,3 +17,5 @@ def get_version() -> str:
 
 
 version: str = get_version()
+
+from .main import coverage
