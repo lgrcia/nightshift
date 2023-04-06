@@ -45,3 +45,35 @@ def coverage(times: list, periods: np.array):
     """
 
     return vectorize_coverage(times, periods)
+
+
+def phase(time, t0, period):
+    time = np.asarray(time)
+    phases = (time[..., None] - t0 + 0.5 * period) % period - 0.5 * period
+    if np.isscalar(period):
+        return phases.T[0]
+    else:
+        return phases
+
+
+def period_match(t0s, periods, tolerance=0.001):
+    """Returns a periodogram with period matching most input times
+
+    Parameters
+    ----------
+    t0s : array
+        list of event observed times
+    periods : float or array
+        periods to match
+    tolerance : float, optional
+        timing error, by default 0.001
+
+    Returns
+    -------
+    tuple(np.array, float)
+        - number of event matched per period
+        - best period
+    """
+    match = np.count_nonzero(np.abs(phase(t0s, t0s[0], periods)) < tolerance, 0)
+    best = periods[np.flatnonzero(match == np.max(match))[-1]]
+    return match, best
