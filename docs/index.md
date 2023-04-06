@@ -1,5 +1,13 @@
 # nighshift
 
+
+```{image} _static/logo@3x.png
+:width: 200px
+:align: center
+```
+
+*How much of an orbit do my observations cover?*
+
 A Python package to compute and visualize observations phase coverage.
 
 In Astronomy, *nighshift* is useful to answer the following questions:
