@@ -14,10 +14,23 @@ A Python package to compute and visualize observation metrics for periodic event
 ## Table of content
 ```{toctree}
 :maxdepth: 0
-   
+:caption: Get started
+
 installation.md
 acknowledgement
+```
+
+```{toctree}
+:maxdepth: 0
+:caption: Tutorials
+
 ipynb/periodmatch
 ipynb/coverage
+```
+
+``{toctree}
+:maxdepth: 0
+
 api.rst
 ```
+
