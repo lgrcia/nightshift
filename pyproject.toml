@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "nighshift"
+name = "nightshift"
 version = "0.0.1"
 authors = [{ name = "Lionel Garcia" }]
 description = "Compute and visualize observations phase coverage"
