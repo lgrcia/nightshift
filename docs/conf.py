@@ -70,8 +70,9 @@ myst_enable_extensions = [
 ]
 
 templates_path = ["_templates"]
-nb_execution_mode = "auto"
+nb_execution_mode = "cache"
 nb_execution_raise_on_error = True
+nb_execution_timeout = 60
 
 html_css_files = ["style.css"]
 
