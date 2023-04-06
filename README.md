@@ -19,6 +19,7 @@
     </a>
   </p>
 </p>
+
 A Python package to compute and visualize observations phase coverage.
 
 In Astronomy, *nighshift* is useful to answer the following questions:
