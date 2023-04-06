@@ -33,10 +33,10 @@ def coverage(times: list, periods: np.array):
 
     Parameters
     ----------
-    times : list
-        a list of observed times
+    times : list of arrays
+        a list of observed times arrays (such as [[0, 1, 2], [5, 6, 7]])
     periods : np.array
-        an array of periods
+        an array of periods (in the same units as :code:`times`)
 
     Returns
     -------
