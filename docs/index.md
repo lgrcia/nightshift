@@ -28,8 +28,9 @@ ipynb/periodmatch
 ipynb/coverage
 ```
 
-``{toctree}
+```{toctree}
 :maxdepth: 0
+:caption: Reference
 
 api.rst
 ```
