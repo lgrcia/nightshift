@@ -17,7 +17,8 @@ def test_coverage():
 
 def test_period_match():
     expected = 1.234
-    t0s = np.random.choice(np.arange(50) * expected, size=4)
+    np.random.seed(42)
+    t0s = np.random.choice(np.arange(50) * expected, size=8)
     periods = np.linspace(0.2, 5, 1000000)
     _, computed = period_match(t0s, periods)
     np.testing.assert_allclose(computed, expected, atol=1e-4)
