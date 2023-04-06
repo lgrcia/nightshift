@@ -1,7 +1,7 @@
 # nightshift
 
 <p align="center" style="margin-bottom:-50px">
-    <img src="_static/logo@x3.png" width="200">
+    <img src="docs/_static/logo@x3.png" width="200">
 </p>
 
 <p align="center">
