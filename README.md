@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  How much of an orbit do my observations cover?
+  Observation metrics for periodic events
   <br>
   <p align="center">
     <a href="https://github.com/lgrcia/nightshift">
@@ -20,7 +20,7 @@
   </p>
 </p>
 
-A Python package to compute and visualize observations phase coverage.
+A Python package to compute and visualize Observation metrics for periodic events.
 
 In Astronomy, *nighshift* is useful to answer the following questions:
 - How much of an orbit with period $P$ has been observed given certain observation times? ([tutorial](docs/ipynb/coverage))
