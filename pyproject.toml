@@ -1,21 +1,31 @@
-[build-system]
-requires = ["setuptools", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "nightshift"
 version = "0.0.1"
-authors = [{ name = "Lionel Garcia" }]
 description = "Compute and visualize observations phase coverage"
+authors = ["Lionel J. Garcia <lionel_garcia@live.fr r>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.7"
-keywords = ["observations", "astronomy", "exoplanets"]
-license = { text = "MIT" }
-classifiers = ["Programming Language :: Python :: 3"]
-dependencies = ["numpy"]
 
-[project.optional-dependencies]
-test = ["pytest"]
+[tool.poetry.group.docs.dependencies]
+sphinx = "*"
+docutils = "*"
+jupyterlab = "*"
+myst-parser = "*"
+twine = "*"
+sphinx-book-theme = "^1.0.0"
+myst-nb = "*"
+sphinx-copybutton = "*"
+photutils = "^1.6.0"
+scipy = "*"
+matplotlib = "*"
+scikit-image = "^0.20.0"
+pandas = "^1.5.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
 docs = [
   "sphinx",
   "docutils",
@@ -24,6 +34,6 @@ docs = [
   "twine",
   "sphinx-book-theme",
   "black",
-  "myst_nb",
+  "myst-nb",
   "sphinx-copybutton",
 ]
