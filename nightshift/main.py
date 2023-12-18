@@ -77,3 +77,24 @@ def period_match(t0s, periods, tolerance=0.001):
     match = np.count_nonzero(np.abs(phase(t0s, t0s[0], periods)) < tolerance, 0)
     best = periods[np.flatnonzero(match == np.max(match))[-1]]
     return match, best
+
+
+def coverage_multiple(t, p):
+    if p == 0:
+        print("period = 0")
+        return 1
+    else:
+        ph = ((t + 0.5*p)%p - (0.5*p))
+        sph_in = np.sort(ph)
+        sph_out = sph_in[::-1]
+
+        sph_in_diff = np.abs(np.diff(sph_in))
+        sph_out_diff = np.abs(np.diff(sph_out))
+
+
+        df = np.mean(np.diff(t))
+
+        spaces_in = np.sort(sph_in[np.hstack([*np.argwhere(sph_in_diff > 4*df).T, len(sph_in)-1])])
+        spaces_out = np.sort(sph_out[np.hstack([*np.argwhere(sph_out_diff > 4*df).T, len(sph_in)-1])])
+
+        return np.sum(spaces_in - spaces_out)/p
